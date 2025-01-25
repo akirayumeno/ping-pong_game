@@ -43,5 +43,10 @@ while game_is_on:
         ball.reset_ball()
         scoreboard.r_point()
 
+    #GAME OVER when you get 10 scores.
+    if scoreboard.l_score == 10 or scoreboard.r_score == 10:
+        game_is_on = False
+        scoreboard.game_over()
+
 
 screen.exitonclick()
